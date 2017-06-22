@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1438348952884255',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+	<div class="col-sm-6 col-xs-8">
+            	<div class="card">
+                	<img src="_img/1.jpg" style="width:600px;" />
+                	
+                   
+                	<img class="hideme" src="_img/1w.jpg"  style="width:600px; display:none;"/>
+                </div>
+                
+            </div>
+            <div class="col-sm-3 col-xs-4">
+                <div class="social-icons">
+                   <ul>
+					  
+						<li class="social-icon social-icon-fb">
+							<div id="shareBtn" class="btn btn-success clearfix">Share</div>
+						</li>
+						
+						
+					</ul>
+                </div>
+            </div>
+            <script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: 'http://race-ks.com/',
+  }, function(response){});
+}
+</script>
+</body>
+</html>
